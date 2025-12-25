@@ -1,0 +1,5 @@
+{
+  "name": "Enterprise Data Star Chart",
+  "description": "A 3D visualization of enterprise departments, subsidiaries, and projects using Three.js and React.",
+  "requestFramePermissions": []
+}
