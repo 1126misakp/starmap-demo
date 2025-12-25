@@ -303,8 +303,8 @@ const ThreeGraph = ({
         if (deptPositions[pid]) {
           const points = [center, deptPositions[pid]];
           const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
-          // Changed color to white (0xffffff) and opacity to 0.15 for better visibility
-          const lineMat = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.15 });
+          // Changed color to white (0xffffff) and opacity to 0.6 for significantly better visibility
+          const lineMat = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.6 });
           const line = new THREE.Line(lineGeo, lineMat);
           line.userData = { source: proj.id, target: pid };
           scene.add(line);
@@ -484,7 +484,7 @@ const ThreeGraph = ({
                 obj.material.opacity = active ? 0.8 : 0.05;
                 obj.material.color.setHex(active ? 0x60A5FA : 0xffffff);
             } else {
-                obj.material.opacity = 0.15;
+                obj.material.opacity = 0.6; // Increased from 0.15 to 0.6 for better visibility
                 obj.material.color.setHex(0xffffff);
             }
         }
